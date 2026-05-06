@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page title</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-family: arial  ;
+            box-sizing: border-box;
+        }
+        ul {
+            list-style: none;
+            background-color: darkgreen;
+        }
+        ul li {
+            display: inline-block;
+            position: relative;
+        }
+        ul li a {
+            display: block;
+            padding: 20px 25px;
+            color: #fff;
+            text-decoration: none;
+            text-align: center
+            font-size: 20px;
+        }
+        ul li ul.dropdown li {
+            display:block;
+        }
+        ul li ul.dropdown {
+            width: 100%;
+            background: #50C878;
+            position: absolute;
+            z-index: 999;
+            display: none;
+        }
+        a:hover {
+            color:black;
+        }
+        ul li a:hover {
+            background: white;
+            color: rgb(32,32,32);
+            border-radius: 5px;
+            box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px white, 0 0 100px white
+        }
+        a {
+          transition: 0.5s;
+        }
+        ul li:hover ul.dropdown {
+            display: block;
+        }        
+        .demo-wrap {
+            overflow: hidden;
+            position: relative;
+        }
+        .demo-bg {
+             opacity: 0.3;
+             position: absolute;
+             left: 0;
+             top: 0;
+             width: 100%;
+             height: 4000px;
+             object-fit: cover;
+        }
+        .demo-content {
+             position: relative;
+        }
+        .backgroundimg {
+            width: 275px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 75px;
+            box-shadow: 0px 8px 20px black;
+            border-radius: 50%;
+        }
+        .imagenav {
+            width: 55px;
+            position: absolute;
+        }
+        footer {
+            background-color: #222222;
+            text-align: center;
+            padding: 10px;
+            color: white
+        }
+        h1 {
+        	text-align: center;
+        	font-size: 100px;
+        }
+        .imgright {
+        	float: right;
+        }
+        .imgleft {
+        	float: left;
+        }
+        #zoom2 {
+            border-radius: 8px;
+            height: 725px;
+            width: 325px;
+            margin-left: 100px;            
+        }
+        #zoom2 {
+            height: 725px;   
+            width: 325px;                     
+            box-shadow: 0 4px 10px #000;
+            transition: all 300ms ease-in-out;
+        }
+        #zoom2:hover {
+            box-shadow: 0 8px 23px #000; 
+            height: 595px;
+            width: 340px;      
+        }
+        #zoom3 {
+            border-radius: 8px;
+            height: 300px;
+            width: 450px;
+            margin-left: 100px;            
+        }
+        #zoom3 {
+            height: 300px;   
+            width: 450px;                     
+            box-shadow: 0 4px 10px #000;
+            transition: all 300ms ease-in-out;
+        }
+        #zoom3:hover {
+            box-shadow: 0 8px 23px #000; 
+            height: 315px;
+            width: 465px;      
+        }
+        a {
+          transition: 0.5s;
+        }
+        b {
+            font-size: 20px;
+        }
+        </style>
+</head>
+<body>
+    <img src="ggmon.png" class="imagenav"></img>
+  <ul>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="Search..." style="height: 25px;"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li>
+            <a href="Home.html">Home</a>
+        </li>
+        <li>
+            <a href="#">Specialization &#9662;</a>
+            <ul class="dropdown">
+                <li><a href="Programming.html">Programming</a></li>
+                <li><a href="Animation.html">Animation</a></li>
+            </ul>
+        </li>
+        <li><a href="Courses.html">Courses</a></li>
+        <li><a href="Careers.html" style="background: white;
+            color: rgb(32,32,32);
+            border-radius: 5px;
+            box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px white, 0 0 100px white">Careers</a></li>
+        <li>
+            <a href="#">Organization &#9662;</a>
+            <ul class="dropdown">
+                <li><a href="Information.html">Information</a></li>
+                <li><a href="Events.html">Events</a></li>
+            </ul>
+        </li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li><a href="Login.html" class="signin">Sign in</a></li>
+    </ul></button>
+    <div class="demo-wrap">
+  <img src="school.jpg" class="demo-bg">
+          <div class="demo-content">
+          	<br>
+          	<br>
+          	<h1>Careers</h1>
+          	<br>
+          	<br>
+          	<br>
+          	<br>
+              <p><b>1. IT technician</b>
+              	<br>
+National average salary: $51,569 per year
+<br>
+<br>
+<b>Primary duties:</b> An IT technician collaborates with support specialists to analyze and diagnose computer issues. They also monitor processing functions, install relevant software and perform tests on computer equipment and applications when necessary. They may also train a company's employees, clients and other users on a new program or function as well.
+<br>
+<br>
+<b><b>Requirements:</b></b> IT technicians must earn an associate degree in IT or a bachelor's degree in computer science or networking. Technicians render services for IT companies depending on the industry they choose to work in and may need to learn more about database programming to give themselves an advantage in an entry-level role.</p>
+<p><br><br><b>2. Support specialist</b><br>
+National average salary: $58,536 per year
+<br>
+<br>
+<b>Primary duties:</b> Support specialists are responsible for reviewing and solving computer network and hardware problems for a business. They can work in a variety of industries to provide general support to a company's employees or at a technology or software-as-a-service (SaaS) company to provide technical support on user experience issues that require technical assistance.
+<br>
+<br>
+<b><b>Requirements:</b></b> Support specialists typically obtain a bachelor's degree in IT or computer science. Having a certificate or an associate degree paired with relevant professional experience may also be acceptable.</p>
+<br>
+<p><br><b>3. Quality assurance tester</b><br>
+National average salary: $65,518 per year
+<br>
+<br>
+<b>Primary duties:</b> Quality assurance testers are technicians or engineers who check software products to see if they're up to industry standards and free of any issues. This role is common for gaming systems, mobile applications and other technology that needs further testing and maintenance when recommended.
+<br>
+<br>
+<b>Requirements:</b> Many quality assurance testers have a bachelor's degree in software design, engineering or computer science. Testers can work on different software for IT companies, which may influence what degree or specialization they pursue. These professionals should also have excellent time management and communication skills to help document test cases.</p>
+<p><br><br><b>4. Web developer</b><br>
+National average salary: $67,854 per year
+<br>
+<br>
+<b>Primary duties:</b> Web developers design the appearance, navigation and content organization of a website. They use coding languages such as HTML, CSS and JavaScript to manage graphics, applications and content that address a client's needs.
+<br>
+<br>
+<b>Requirements:</b> Many web developers earn an associate degree in web development or another relevant IT field. Some may pursue a bachelor's degree in IT or another business field. Others may develop their web design skills through certificate programs or self-paced learning. To secure employment, previous experience and a portfolio of work are often required.</p>
+<p><br><br><b>5. IT security specialist</b><br>
+National average salary: $71,818 per year
+<br>
+<br>
+<b>Primary duties:</b> IT security specialists work in various industries to build and maintain digital protective measures on intellectual property and data that belong to an organization. They help companies create contingency plans in case information gets hacked from their networks and servers. These professionals also create strategies to troubleshoot problems as they arise.
+<br>
+<br>
+<b>Requirements:</b> A bachelor's degree or professional certification is often required. Courses may involve math, programming and operating systems and certifications offered by the Information Systems Security Certification Consortium (ISC2).</p>
+<p><br><br><b>6. Computer programmer</b><br>
+National average salary: $73,218 per year
+<br>
+<br>
+<b>Primary duties:</b> A computer programmer is someone who writes new computer software using coding languages like HTML, JavaScript and CSS. Video game software can be updated to improve online gameplay, which is an opportunity for programmers to troubleshoot problems experienced by gamers after the game is released to the general public.
+<br>
+<br>
+<b>Requirements:</b> A programmer typically completes a bachelor's degree in computer science and an internship to build their skills. Certifications are also strongly encouraged, and there are many coding academies to choose from.</p>
+<p><br><br><b>7. Systems analyst</b><br>
+National average salary: $82,373 per year 
+<br>
+<br>
+<b>Primary duties:</b> A systems analyst reviews design components and uses their knowledge of information technology to solve business problems. They identify ways that infrastructure needs to change to streamline business and IT operations. They can also assist technicians in training staff to implement the changes they propose.
+<br>
+<br>
+<b>Requirements:</b> A bachelor's degree in computer science or a related IT field is often required. Coursework in business administration, management and finance may help these professionals better apply their IT knowledge to improving business practices.</p>
+<p>
+	<br>
+<br>
+   <b> 8. Network engineer</b><br>
+National average salary: $89,326 per year
+<br>
+<br>
+<b>Primary duties:</b> Network engineers work on the day-to-day maintenance and development of a company's computer network, utilizing their skills to make the network available and efficient for all employees within an organization.
+<br>
+<br>
+<b>Requirements:</b> These professionals typically need a bachelor's degree in computer science or information systems to understand the functions of a network and become familiar with potential solutions needed to maintain one. Some employers may also require a Master of Business Administration (MBA) degree for those who work with other internal stakeholders of the organization to determine the best technology practices.
+</p>
+<p><br><br><b>9. Software engineer</b><br>
+National average salary: $93,817 per year
+<br>
+<br>
+<b>Primary duties:</b> Software engineers apply their knowledge of mathematics and computer science to create and improve new software. They may work on enterprise applications, operating systems and network control systems, which are all examples of software that can be used to help businesses scale their IT infrastructure.
+<br>
+<br>
+<b>Requirements:</b> Most computer scientists need both a bachelor's and a master's degree to become experts in software development and maintenance. They learn and practice skills in technical problem-solving, diagnosis, troubleshooting and programming languages.</p>
+<p>
+   <br><br> <b>10. User experience designer</b><br>
+National average salary: $94,954 per year
+<br>
+<br>
+<b>Primary duties:</b> A user experience (UX) designer is involved with all facets of product development regarding its purchasing, branding, usability and functionality. They collect and review user feedback to determine what a product needs to be efficient, functional and successful. They apply this feedback to the design, organization and usability. These professionals then monitor the process of testing and revising products until they meet their consumers' high-quality standards.
+<br>
+<br>
+<b>Requirements:</b> UX designers may pursue an associate or bachelor's degree program in an IT field and pursue additional coursework or training in design, business, web development and programming. Others may be self-taught in programming, design and development. Many employers do seek previous experience so an internship or portfolio may help these professionals secure employment.<br>
+</p>
+<p><br><br><b>11. Database administrator</b><br>
+National average salary: $98,860 per year
+<br>
+<br>
+<b>Primary duties:</b> Database administrators employ specialized software to organize and keep track of data. The software can be associated with software configuration, security and performance when applicable. These professionals frequently diagnose and solve complex IT issues related to the data infrastructure to ensure an organization's data is safe, accessible and easy to navigate.
+<br>
+<br>
+<b>Requirements:</b> Database administrators typically need to earn a bachelor's degree in computer science or management information systems. They often start as a database analyst or a developer before moving into this role so they can obtain experience in data collection and working within a network's databases.</p>
+<p><br>
+<br>
+    <b>12. Data scientist</b><br>
+National average salary: $102,312 per year
+<br>
+<br>
+<b>Primary duties:</b> A data scientist analyzes and organizes data to determine trends that can influence business decisions. Their methods and IT tools use statistics and machine learning to help collect and process a company's data such as financial records, sales, prospects and lead generation. Some duties vary for specific industries. For example, data scientists in the healthcare industry keep electronic health records (EHRs) intact for hospitals to have access to confidential medical information. They may also use data to help healthcare organizations make sound business decisions.
+<br>
+<br>
+<b>Requirements:</b> Many of these professionals choose to pursue both a bachelor's and a master's degree in IT or other business fields. Some pursue additional degrees, coursework and certifications that relate to their specific industry, such as health care.
+</p>
+<p><br>
+<br>
+    <b>13. Computer scientist</b><br>
+National average salary: $108,521 per year 
+<br>
+<br>
+<b>Primary duties:</b> A computer scientist applies their technological skills and resources to solve IT problems for businesses. They write new software to complete tasks in a quick and efficient period as well as develop new functions that can be of use for employees or clients.
+<br>
+<br>
+Some computer scientists may also be application developers who help program software to serve users. IT companies heavily rely on computer scientists to create new programming languages and bolster the efficiency of hardware and software programs.
+<br>
+<br>
+<b>Requirements:</b> Most computer scientists need to have a bachelor's degree but employers may require a master's degree as well. Previous work experience may also be valuable to prospective employers.
+</p>
+<p><br>
+<br>
+    <b>14. IT director<br></b><br>
+National average salary: $111,971 per year
+<br>
+<br>
+<b>Primary duties:</b> An IT director oversees the strategy and execution of IT operations for an organization. They ensure that department tasks align with the company's goals and development. These professionals may also collaborate with other internal IT professionals as well as executive management to generate contingency plans, budgets and development goals.
+<br>
+<br>
+<b>Requirements:</b> This position may require a graduate degree and relevant industry certifications, such as in certain programs or applicable management courses. Entry and mid-level roles in IT support and database architecture can provide these professionals with the well-rounded experience to help them advance to this management position.
+</p>
+              </div>
+              </div>
+              <footer>
+    <p>
+        Contact: <a href="mailto:alsudaisiolama@gmail.com">alsudaisiolama@gmail.com</a><br>
+        ©2024 PanghuloNationalHighSchool.com
+    </p>
+</footer>
+</body>
+</html>

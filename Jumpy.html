@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumpy</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #1a1a1a;
+            color: #00ff00;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive;
+            color: #00ff00;
+            margin: 20px;
+        }
+        canvas {
+            border: 2px solid #00ff00;
+            display: block;
+            margin: 20px auto;
+            background-color: #000000;
+        }
+        #tryAgainBtn {
+            display: none;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #00ff00;
+            color: #000000;
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            font-family: 'Comic Sans MS', cursive;
+        }
+        #tryAgainBtn:hover {
+            background-color: #000000;
+            color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jumpy</h1>
+    <canvas id="canvas" width="800" height="400"></canvas>
+    <button id="tryAgainBtn">Try Again</button>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        const player = {
+            x: 100,
+            y: canvas.height / 2,
+            size: 20,
+            colorTop: '#00ff00',
+            colorBottom: '#006400',
+            velocity: 0,
+            jumpStrength: -12,
+            gravity: 0.5,
+            jumping: false,
+            jumpsLeft: 3,
+            jump() {
+                if (this.jumpsLeft > 0) {
+                    this.velocity = this.jumpStrength;
+                    this.jumping = true;
+                    this.jumpsLeft--;
+                }
+            },
+            draw() {
+                const playerGradient = ctx.createLinearGradient(this.x, this.y - this.size, this.x, this.y);
+                playerGradient.addColorStop(0, this.colorTop);
+                playerGradient.addColorStop(1, this.colorBottom);
+                ctx.fillStyle = playerGradient;
+                ctx.fillRect(this.x, this.y - this.size, this.size, this.size * 2);
+            },
+            update() {
+                this.velocity += this.gravity;
+                this.y += this.velocity;
+                if (this.y >= canvas.height - this.size) {
+                    this.y = canvas.height - this.size;
+                    this.velocity = 0;
+                    this.jumping = false;
+                    this.jumpsLeft = 3;
+                }
+            }
+        };
+
+        let obstacles = [];
+        let obstacleSpeed = 5;
+        let obstacleGap = 200;
+        let lastObstacleTime = 0;
+        let score = 0;
+        let highscore = localStorage.getItem('highscore') || 0;
+        let gameRunning = true;
+
+        function drawObstacle(x, height) {
+            const obstacleGradient = ctx.createLinearGradient(x, canvas.height - height, x, canvas.height);
+            obstacleGradient.addColorStop(0, '#ff0000');
+            obstacleGradient.addColorStop(1, '#8b0000');
+            ctx.fillStyle = obstacleGradient;
+            ctx.fillRect(x, canvas.height - height, 30, height);
+            ctx.beginPath();
+            ctx.moveTo(x, canvas.height - height);
+            ctx.lineTo(x + 15, canvas.height - height - 20);
+            ctx.lineTo(x + 30, canvas.height - height);
+            ctx.closePath();
+            ctx.fillStyle = '#ff4444';
+            ctx.fill();
+        }
+
+        function generateObstacle() {
+            const minHeight = 20;
+            const maxHeight = 100;
+            const height = Math.random() * (maxHeight - minHeight) + minHeight;
+            obstacles.push({
+                x: canvas.width,
+                height: height
+            });
+            lastObstacleTime = Date.now();
+        }
+
+        function updateObstacles() {
+            for (let i = obstacles.length - 1; i >= 0; i--) {
+                obstacles[i].x -= obstacleSpeed;
+                if (obstacles[i].x + 30 < 0) {
+                    obstacles.splice(i, 1);
+                    score++;
+                }
+            }
+        }
+
+        function drawScore() {
+            ctx.fillStyle = '#00ff00';
+            ctx.font = '24px Comic Sans MS';
+            ctx.textAlign = 'left';
+            ctx.fillText(`Score: ${score}`, 10, 30);
+            ctx.fillText(`Highscore: ${highscore}`, 10, 60);
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            player.draw();
+            obstacles.forEach(obstacle => {
+                drawObstacle(obstacle.x, obstacle.height);
+            });
+            drawScore();
+        }
+
+        function update() {
+            player.update();
+            updateObstacles();
+            if (score > highscore) {
+                highscore = score;
+                localStorage.setItem('highscore', highscore);
+            }
+        }
+
+        function checkCollision() {
+            for (let obstacle of obstacles) {
+                if (
+                    player.x < obstacle.x + 30 &&
+                    player.x + player.size > obstacle.x &&
+                    player.y > canvas.height - obstacle.height
+                ) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function gameLoop() {
+            if (!gameRunning) return;
+            
+            draw();
+            update();
+            
+            if (checkCollision()) {
+                gameOver();
+                return;
+            }
+            
+            const currentTime = Date.now();
+            if (currentTime - lastObstacleTime > 2000) {
+                generateObstacle();
+            }
+            
+            requestAnimationFrame(gameLoop);
+        }
+
+        function gameOver() {
+            gameRunning = false;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#00ff00';
+            ctx.font = '48px Comic Sans MS';
+            ctx.textAlign = 'center';
+            ctx.fillText('Game Over', canvas.width / 2, canvas.height / 2 - 40);
+            ctx.font = '36px Comic Sans MS';
+            ctx.fillText(`Score: ${score}`, canvas.width / 2, canvas.height / 2);
+            ctx.fillText(`Highscore: ${highscore}`, canvas.width / 2, canvas.height / 2 + 50);
+            document.getElementById('tryAgainBtn').style.display = 'block';
+        }
+
+        function restartGame() {
+            gameRunning = true;
+            score = 0;
+            player.y = canvas.height / 2;
+            player.velocity = 0;
+            player.jumpsLeft = 3;
+            obstacles = [];
+            lastObstacleTime = Date.now();
+            document.getElementById('tryAgainBtn').style.display = 'none';
+            gameLoop();
+        }
+
+        window.addEventListener('keydown', (event) => {
+            if (event.code === 'Space' && gameRunning) {
+                event.preventDefault();
+                player.jump();
+            }
+        });
+
+        document.getElementById('tryAgainBtn').addEventListener('click', restartGame);
+
+        // Start the game
+        gameLoop();
+    </script>
+</body>
+</html>

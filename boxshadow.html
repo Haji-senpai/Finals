@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Shadow animation jQuery plugin - Demos</title>
+		<style>
+			#box{ 
+    -webkit-box-shadow: #000 1px 1px 3px; 
+    -moz-box-shadow: #000 1px 1px 3px; 
+    box-shadow: #000 1px 1px 3px; 
+}
+		</style>
+	</head>
+
+	<body>
+		<div id="box">this is my box<div id="box">this is my box<div id="box">this is my box<div id="box">this is my box</div>
+		</div>
+		</div>
+		</div>
+		<script>
+		    $(document).ready(function(){
+		        $('#box').delay(200).animate({
+    'boxShadowX': '10px',
+    'boxShadowY':'10px',
+    'boxShadowBlur': '20px',
+});
+});		    
+		</script>
+	</body>
+</html>

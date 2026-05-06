@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panghulo National High School</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#imggg").click(function(){
+                $("#imggg").animate({
+                    marginleft: 'auto',
+                    marginright: 'auto',
+                    width: '1000px',
+                    height: '750px',
+                })
+            })
+        })
+    </script>
+    <script>
+        
+    </script>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-family: arial  ;
+            box-sizing: border-box;
+        }
+        ul {
+            list-style: none;
+            background-color: darkgreen;
+        }
+        ul li {
+            display: inline-block;
+            position: relative;
+        }
+        ul li a {
+            display: block;
+            padding: 20px 25px;
+            color: #fff;
+            text-decoration: none;
+            text-align: center
+            font-size: 20px;
+        }
+        ul li ul.dropdown li {
+            display:block;
+        }
+        ul li ul.dropdown {
+            width: 100%;
+            background: #50C878;
+            position: absolute;
+            z-index: 999;
+            display: none;
+        }
+        a:hover {
+            color:black;
+        }
+        ul li a:hover {
+            background: white;
+            color: rgb(32,32,32);
+            border-radius: 5px;
+            box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px white, 0 0 100px white
+        }
+        a {
+          transition: 0.5s;
+        }
+        ul li:hover ul.dropdown {
+            display: block;
+        }        
+        .demo-wrap {
+            overflow: hidden;
+            position: relative;
+        }
+        .demo-bg {
+             opacity: 0.3;
+             position: absolute;
+             left: 0;
+             top: 0;
+             width: 100%;
+             height: 4000px;
+             object-fit: cover;
+        }
+        .demo-content {
+             position: relative;
+        }
+        .backgroundimg {
+            width: 275px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 75px;
+            box-shadow: 0px 8px 20px black;
+            border-radius: 50%;
+        }
+        .column {
+            float: left;
+            width: 275px;
+            padding: 5px;
+            margin-left: 80px
+        }
+            /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        .para1 {
+            text-align: center;
+            width: 765px;
+        }
+        .para2 {
+            text-align: center;
+            width: 300px;
+            margin-left: 100px;
+        }
+        .para3 {
+            text-align: center;
+            width: 300px;
+        }
+        .para4 {
+          font-family: arial;
+        }
+        .para5 {
+          font-size: 12px;
+          text-align: center;
+          margin-left: 100px;
+          width: 300px;
+        }
+        img {
+            border-radius: 8px
+        }
+        .zoom {
+            border-radius: 8px;
+            width: 750px;
+            height: 500px;            
+        }
+        .zoom {
+            width: 750px;   
+            height: 500px;                     
+            box-shadow: 0 4px 10px #000;
+            transition: all 300ms ease-in-out;
+        }
+        .zoom:hover {
+            box-shadow: 0 8px 23px #000; 
+            width: 765px;
+            height: 515px;      
+        }
+        .imgprob {
+          margin-left: 50px;
+        }
+        .zoom2 {
+            border-radius: 8px;
+            width: 300px;
+            height: 175px;
+            margin-left: 100px;            
+        }
+        .zoom2 {
+            width: 300px;   
+            height: 175px;                     
+            box-shadow: 0 4px 10px #000;
+            transition: all 300ms ease-in-out;
+        }
+        .zoom2:hover {
+            box-shadow: 0 8px 23px #000; 
+            width: 315px;
+            height: 190px;      
+        }
+        .zoom3 {
+            border-radius: 8px;
+            width: 300px;
+            height: 175px;
+            margin-left: 100px;            
+        }
+        .zoom3 {
+            width: 300px;   
+            height: 175px;                     
+            box-shadow: 0 4px 10px #000;
+            transition: all 300ms ease-in-out;
+        }
+        .zoom3:hover {
+            box-shadow: 0 8px 23px #000; 
+            width: 315px;
+            height: 190px;      
+        }
+        .table1 {
+          width: 320px;
+          height: 50px;
+          border: 5px solid darkgreen;
+          margin-left: 100px;
+          background-color: darkgreen
+        }
+        .table2 {
+          width: 320px;
+          height: 300px;
+          border: 5px solid gray;
+          margin-left: 100px;
+          background-color: gray;
+        }
+        .pblue {
+            text-shadow: 2px 2px 5px blue;
+            color: blue;
+            font-size: 50px;
+        }
+        .pred {
+            text-shadow: 2px 2px 5px red;
+            color: red;
+            font-size: 50px;
+        }
+        .divDeped table {
+            transition: all 300ms ease-in-out;
+        }
+        .divDeped1 table {
+            transition: all 300ms ease-in-out;
+        }
+        .divDeped2 table {
+            transition: all 300ms ease-in-out;
+        }
+        .divDeped3 table {
+            transition: all 300ms ease-in-out;
+        }
+        .divDeped4 table {
+            transition: all 300ms ease-in-out;
+        }
+        .divDeped5 table {
+            transition: all 300ms ease-in-out;
+        }
+        .divDeped table:hover {
+            box-shadow: 0 8px 23px #000; 
+            width: 335px;
+            height: 65px;
+        }
+        .divDeped1 table:hover {
+            box-shadow: 0 8px 23px #000; 
+            width: 335px;
+            height: 315px;
+        }
+        .divDeped2 table:hover {
+            box-shadow: 0 8px 23px #000; 
+            width: 335px;
+            height: 65px;
+        }
+        .divDeped3 table:hover {
+            box-shadow: 0 8px 23px #000; 
+            width: 335px;
+            height: 315px;
+        }
+        .divDeped4 table:hover {
+            box-shadow: 0 8px 23px #000; 
+            width: 335px;
+            height: 65px;
+        }
+        .divDeped5 table:hover {
+            box-shadow: 0 8px 23px #000; 
+            width: 335px;
+            height: 315px;
+        }
+        .signin:hover {
+          border-radius: 7px;
+          border-color: lightgreen;
+          background-color: rgb(0 200 0);
+        }
+        .imagenav {
+            width: 55px;
+            position: absolute;
+        }
+        footer {
+            background-color: #222222;
+            text-align: center;
+            padding: 10px;
+            color: white
+        }
+    </style>
+</head>
+<body>
+     <img src="ggmon.png" class="imagenav"></img>
+  <ul>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="Search..." style="height: 25px;"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li style="background: white;
+            color: rgb(32,32,32);
+            border-radius: 5px;
+            box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px white, 0 0 100px white">
+            <a href="Home.html" style="color: black">Home</a>
+        </li>
+        <li>
+            <a href="#">Specialization &#9662;</a>
+            <ul class="dropdown">
+                <li><a href="Programming.html">Programming</a></li>
+                <li><a href="Animation.html">Animation</a></li>
+            </ul>
+        </li>
+        <li><a href="Courses.html">Courses</a></li>
+        <li><a href="Careers.html">Careers</a></li>
+        <li>
+            <a href="#">Organization &#9662;</a>
+            <ul class="dropdown">
+                <li><a href="Information.html">Information</a></li>
+                <li><a href="Events.html">Events</a></li>
+            </ul>
+        </li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li><a href="Login.html" class="signin">Sign in</a></li>
+    </ul></button>
+    <div class="demo-wrap">
+  <img src="school.jpg" class="demo-bg">
+          <div class="demo-content">
+              <img src="ggmon.png" class="backgroundimg"></img>
+              <h1 style="font-size: 50px">
+                  Welcome to Panghulo National High School
+                  </h1>
+                  <br>
+              <h3>We are facing the new normal with a positive
+approach and taking the challenge head-on for
+our students and stakeholders.
+
+To our learners,
+We believe we can succeed in this together.
+In these critical times
+Don't ever hesitate to tell us whatever you need.
+<br>
+Panghulo National High School is a public-sectarian school, located in Barangay Panghulo, Malabon City, Philippines. It is one of the major high schools in the city of Malabon.
+
+Panghulo National High School was founded on 1968. It was first called Panghulo Barrio High School then Panghulo Barangay High School. Later it was called Malabon Municipal High School (Panghulo Annex) to Malabon National High School (Panghulo Annex). Panghulo National High School was then called as its present name.</h3>
+<br>
+<h2>Principal Sr. Julius Jaylo</h2>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+    <img src="DSC_3705-768x513.png" class="zoom">
+    <p class="para1"><b>Four PNHS Faculty Named Microsoft Ambassadors</b><br>
+Four faculty members of the Senior High School are among this year’s Microsoft Education Ambassadors. Jomar L. Chua, Andres P. Bonifacio, Maria Aurea R. Jabon, and Jasmin Uy will be joining a group of individuals from all over the country who were selected based on their competency and passion for education, technology and teaching.</p>
+      <br>
+      <br>
+      <br>
+    <img src="AWARE-2a-768x510.png" class="zoom">
+    <p class="para1"><b>Project AWARE 2 will equip PNHS graduates for job</b><br>
+JP Morgan Chase Foundation and the Education Development Center (EDC) chose Panghulo National High School as the first and the only beneficiary of Project AWARE 2 (Accelerating Work Achievement and Readiness for Employment 2) among the schools in the Division of Malabon City last February 21, 2017.</p>
+      <br>
+      <br>
+      <br>
+    <img src="Global-Filipino-School-1.png" class="zoom" class="imgprob">
+    <p class="para1"><b>Globe Telecom selects PNHS Global Filipino School</b><br>
+Panghulo National High School, the first and the only school in the Division of Malabon City is among the lucky schools in the country to benefit under the Global Filipino School (GFS) program of Globe Telecom. GFS is a long-term educational initiative that seeks to transform select public schools into centers of excellence in innovative teaching methods and Information and Communications Technology.</p>
+</center>
+<br>
+<br>
+<br>
+<h1>
+  Places of Panghulo National High School
+</h1>
+<br>
+<div class="row">
+  <div class="column">
+    <img src="Senior.jpg" class="zoom2">
+    <p class="para2"><b>Senior High Building</b>
+      <br>
+      This is the building of Senior High Building where grade 11 and grade 12 study, we have different strand: ABM, Home Economics, and ICT.
+    </p>
+  </div>
+  <div class="column">
+    <img src="School Ground.jpg" class="zoom2">
+     <p class="para2"><b>School Ground</b>
+      <br>
+      This is the School Ground where all events in school happens like flag ceremony happen and flag retreat 
+    </p>
+  </div>
+  <div class="column">
+    <img src="Junior.jpg" class="zoom2">
+     <p class="para2"><b>Junior High Building</b>
+      <br>
+      This is the building of Junior High School where grade 7, 8 ,9 ,10 study, there are 8 subjects in junior high: E.S.P, Math, TLE, Filipino, English, Science, MAPEH, A.P
+    </p>
+  </div>
+</div>
+<h1>
+  About Panghulo National High School
+</h1>
+<br>
+<div class="row">
+  <div class="column">
+    <img src="PNHS2.jpg" class="zoom2">
+    <p class="para5"><b style="font-size: 15px">Panghulo National High School is built for</b><br>
+    Organized spaces purposed for teaching and learning. The classrooms where teachers teach and students learn are of central importance. Classrooms may be specialized for certain subjects, such as laboratory classrooms for science education and workshops for industrial arts education.</p>
+  </div>
+  <div class="column">
+    <img src="PNHS1.jpg" class="zoom2">
+    <p class="para5"><b>Why you should study in Panghulo National High School</b><br>
+It uses every resource, advantage, gift, and opportunity it has to grow students and tends to see more resources, advantages, gifts, and opportunities than lower-performing schools. A good school has students who get along with and support one another towards a common goal–and they know what that goal is.</p>
+  </div>
+  <div class="column">
+    <img src="History.jpg" class="zoom2">
+    <p class="para5"><b>The history of Panghulo National High School</b><br>
+Was founded on 1968. It was first called Panghulo Barrio High School then Panghulo Barangay High School. Later it was called Malabon Municipal High School (Panghulo Annex) to Malabon National High School (Panghulo Annex). Panghulo National High School was then called as its present name.</p>
+</div>
+</div>
+<br>
+<br>
+<h1>
+  <span class="pblue">D</span>
+  <span class="pblue">e</span>
+  <span class="pblue">p</span>
+  <span class="pred">E</span>
+  <span class="pred">d</span>
+</h1>
+<div class="row">
+  <div class="column">
+    <div class="divDeped">
+    <table class="table1">
+      <tr>
+        <th>
+    <p class="para3"><b>DepEd VISION</b></p>
+    </th>
+    </tr>
+    </table>
+  </div>
+      <br>
+      <div class="divDeped1">
+      <table class="table2">
+        <tr>
+          <th>
+          <p>        
+      We dream of Filipinos
+who passionately love their country
+and whose values and competencies
+enable them to realize their full potential
+and contribute meaningfully to building the nation.
+<br>
+<br>
+As a learner-centered public institution,
+the Department of Education
+continuously improves itself
+to better serve its stakeholders.
+    </p>
+          </th>
+        </tr>
+      </table>
+      </div>
+  </div>
+  <div class="column">
+    <div class="divDeped2">
+    <table class="table1">
+      <tr>
+        <th>
+     <p class="para3"><b>CORE VALUES</b></p>
+      </th>
+    </tr>
+    </table>
+    </div>
+    <br>
+    <div class="divDeped3">
+    <table class="table2">
+      <tr>
+        <th>
+          <p class="para4">
+      Maka-Diyos
+      <br>
+      <br>
+Maka-tao
+<br>
+<br>
+Makakalikasan
+<br>
+<br
+>Makabansa
+</p>
+        </th>
+      </tr>
+    </table>
+    </div>
+  </div>
+  <div class="column">
+    <div class="divDeped4">
+        <table class="table1">
+      <tr>
+        <th>
+     <p class="para3"><b>DepEd MISSION</b>
+      </th>
+    </tr>
+    </table>
+    </div>
+      <br>
+      <div class="divDeped5">
+      <table class="table2">
+        <tr>
+          <th>
+      To protect and promote the right of every Filipino to quality, equitable, culture-based, and complete basic education where:
+
+Students learn in a child-friendly, gender-sensitive, safe, and motivating environment.
+Teachers facilitate learning and constantly nurture every learner.
+Administrators and staff, as stewards of the institution, ensure an enabling and supportive environment for effective learning to happen.
+Family, community, and other stakeholders are actively engaged and share responsibility for developing life-long learners.
+    </p>    
+          </th>
+        </tr>
+      </table>
+      </div>
+  </div>
+</div>
+ </div>
+ </div>
+ </div>
+</div>
+<br>
+<br>
+<footer>
+    <p>
+        Contact: <a href="mailto:alsudaisiolama@gmail.com">alsudaisiolama@gmail.com</a><br>
+        ©2024 PanghuloNationalHighSchool.com
+    </p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Events</title>
+	<style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-family: arial  ;
+            box-sizing: border-box;
+        }
+        ul {
+            list-style: none;
+            background-color: darkgreen;
+        }
+        ul li {
+            display: inline-block;
+            position: relative;
+        }
+        ul li a {
+            display: block;
+            padding: 20px 25px;
+            color: #fff;
+            text-decoration: none;
+            text-align: center
+            font-size: 20px;
+        }
+        ul li ul.dropdown li {
+            display:block;
+        }
+        ul li ul.dropdown {
+            width: 100%;
+            background: #50C878;
+            position: absolute;
+            z-index: 999;
+            display: none;
+        }
+        ul li a:hover {
+            background: white;
+            color: rgb(32,32,32);
+            border-radius: 5px;
+            box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px white, 0 0 100px white
+        }
+        ul li:hover ul.dropdown {
+            display: block;
+        }        
+        .demo-wrap {
+            overflow: hidden;
+            position: relative;
+        }
+        .demo-bg {
+             opacity: 0.3;
+             position: absolute;
+             left: 0;
+             top: 0;
+             width: 100%;
+             height: 3000px;
+             object-fit: cover;
+        }
+       .demo-content {
+             position: relative;
+        }
+        .backgroundimg {
+            width: 275px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 75px;
+        }
+        .column {
+            float: left;
+            width: 275px;
+            padding: 5px;
+            margin-left: 80px
+        }
+            /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        .para5 {
+            text-align: center;
+            width: 300px;
+            margin-left: 100px;
+        }
+        img {
+            border-radius: 8px
+        }
+        h1 {
+            text-align: center;
+            font-size: 100px;
+        }
+        .zoom2 {
+            border-radius: 8px;
+            width: 300px;
+            height: 175px;
+            margin-left: 100px;            
+        }
+        .zoom2 {
+            width: 300px;   
+            height: 175px;                     
+            box-shadow: 0 4px 10px #000;
+            transition: all 300ms ease-in-out;
+        }
+        .zoom2:hover {
+            box-shadow: 0 8px 23px #000; 
+            width: 315px;
+            height: 190px;      
+        }
+        .imagenav {
+            width: 55px;
+            position: absolute;
+        }
+        footer {
+            background-color: #222222;
+            text-align: center;
+            padding: 10px;
+            color: white
+        }
+        a {
+          transition: 0.5s;
+        }
+        footer {
+            background-color: #222222;
+            text-align: center;
+            padding: 10px;
+            color: white
+        }
+	</style>
+</head>
+<body>
+	<img src="ggmon.png" class="imagenav"></img>
+  <ul>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="Search..." style="height: 25px;"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li>
+            <a href="Home.html">Home</a>
+        </li>
+        <li>
+            <a href="#">Specialization &#9662;</a>
+            <ul class="dropdown">
+                <li><a href="Programming.html">Programming</a></li>
+                <li><a href="Animation.html">Animation</a></li>
+            </ul>
+        </li>
+        <li><a href="Courses.html">Courses</a></li>
+        <li><a href="Careers.html">Careers</a></li>
+        <li>
+            <a href="#" style="background: white;
+            color: rgb(32,32,32);
+            border-radius: 5px;
+            box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px white, 0 0 100px white">Organization &#9662;</a>
+            <ul class="dropdown">
+                <li><a href="Information.html">Information</a></li>
+                <li><a href="Events.html" style="background: white;
+            color: rgb(32,32,32);
+            border-radius: 5px;
+            box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px white, 0 0 100px white">Events</a></li>
+            </ul>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li><a href="Login.html" class="signin">Sign in</a></li>
+    </ul></button>
+    <div class="demo-wrap">
+  <img src="school.jpg" class="demo-bg">
+          <div class="demo-content">
+        </li>
+    </ul>
+    <h1>Events</h1>
+    <br>
+    <br>
+    <div class="row">
+  <div class="column">
+    <img src="Culminating.jpeg" class="zoom2">
+    <p class="para5"><b>Culminating</b><br>
+    In any type of school setting, teachers and professors often give tasks for students to accomplish, such as class work, homework, projects, and tests. All of these tasks are geared towards showing the teacher what the students have comprehended thus far in any given week, month, year, or specific unit. A culminating activity is very much the same, but it's used at the end of a unit as a final assessment to engage learning.</p>
+  </div>
+  <div class="column">
+    <img src="Spelling.jpeg" class="zoom2">
+    <p class="para5"><b>Spelling Bee</b><br>
+One of the events held in schools to test the intellectual capabilities of students in different subjects such as science, mathematics, social science, current events, and general knowledge. Some quiz bee competition is confined to a specific area such as mathematics, bible, science, chemistry, physics, information and technology, and technology and livelihood education (tle) and the list goes on.</p>
+  </div>
+  <div class="column">
+    <img src="MLBB.jpeg" class="zoom2">
+    <p class="para5"><b>Mobile Legends Tournamet</b><br>
+Mobile Legends: Bang Bang Tournament is held every 4th quarter of the school year. all grade levels is able to join but only 5 players every section. The game is based on on skill, ability, and strategy. Try to win to become a championship of the school.</p>
+</div>
+</div>
+</div>
+<footer>
+    <p>
+        Contact: <a href="mailto:alsudaisiolama@gmail.com">alsudaisiolama@gmail.com</a><br>
+        ©2024 PanghuloNationalHighSchool.com
+    </p>
+</footer>
+</body>
+</html>

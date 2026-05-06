@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page title</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-family: arial  ;
+            box-sizing: border-box;
+        }
+        ul {
+            list-style: none;
+            background-color: darkgreen;
+        }
+        ul li {
+            display: inline-block;
+            position: relative;
+        }
+        ul li a {
+            display: block;
+            padding: 20px 25px;
+            color: #fff;
+            text-decoration: none;
+            text-align: center
+            font-size: 20px;
+        }
+        ul li ul.dropdown li {
+            display:block;
+        }
+        ul li ul.dropdown {
+            width: 100%;
+            background: #50C878;
+            position: absolute;
+            z-index: 999;
+            display: none;
+        }
+        a:hover {
+            color:black;
+        }
+        ul li a:hover {
+            background: white;
+            color: rgb(32,32,32);
+            border-radius: 5px;
+            box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px white, 0 0 100px white
+        }
+        a {
+          transition: 0.5s;
+        }
+        ul li:hover ul.dropdown {
+            display: block;
+        }        
+        .demo-wrap {
+            overflow: hidden;
+            position: relative;
+        }
+        .demo-bg {
+             opacity: 0.3;
+             position: absolute;
+             left: 0;
+             top: 0;
+             width: 100%;
+             height: 8000px;
+             object-fit: cover;
+        }
+        .demo-content {
+             position: relative;
+        }
+        .backgroundimg {
+            width: 275px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 75px;
+            box-shadow: 0px 8px 20px black;
+            border-radius: 50%;
+        }
+        .imagenav {
+            width: 55px;
+            position: absolute;
+        }
+        footer {
+            background-color: #222222;
+            text-align: center;
+            padding: 30px;
+            color: white
+        }
+        h3 {
+            text-align: center;
+            font-size: 70px
+        }
+        h1 {
+            text-align: center;
+            font-size: 100px;
+        }
+        img {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .zoom {
+            width: 400px;                  
+            box-shadow: 0 4px 10px #000;
+            transition: all 300ms ease-in-out;
+            border-radius: 8px
+        }
+        .zoom:hover {
+            box-shadow: 0 8px 23px #000; 
+            width: 420px;      
+        }
+        </style>
+</head>
+<body>
+  <img src="ggmon.png" class="imagenav"></img>
+  <ul>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="Search..." style="height: 25px;"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li>
+            <a href="Home.html">Home</a>
+        </li>
+        <li>
+            <a href="#">Specialization &#9662;</a>
+            <ul class="dropdown">
+                <li><a href="Programming.html">Programming</a></li>
+                <li><a href="Animation.html">Animation</a></li>
+            </ul>
+        </li>
+        <li><a href="Courses.html">Courses</a></li>
+        <li><a href="Careers.html">Careers</a></li>
+        <li>
+            <a href="#" style="background: white;
+            color: rgb(32,32,32);
+            border-radius: 5px;
+            box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px white, 0 0 100px white" style="color: black">Organization &#9662;</a>
+            <ul class="dropdown">
+                <li><a href="Information.html" style="background: white;
+            color: rgb(32,32,32);
+            border-radius: 5px;
+            box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px white, 0 0 100px white" style="color: black">Information</a></li>
+                <li><a href="Events.html">Events</a></li>
+            </ul>
+        </li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li><a href="Login.html" class="signin">Sign in</a></li>
+    </ul></button>
+    <div class="demo-wrap">
+  <img src="school.jpg" class="demo-bg">
+          <div class="demo-content">
+              <br>
+              <br>
+              <h1>
+                  Information
+                  </h1>
+                  <br>
+                  <br>
+                  <h3>
+President: Josaiah Reyes
+<img src="President.jpg" class="zoom"></img>
+<br>
+Vice President: Prince Botana
+<img src="Vicepresident.png" class="zoom"></img>
+<br>
+Secretary: Jimwel Cabigao
+<img src="Secretary.png" class="zoom"></img>
+<br>
+Treasurer: Samantha Botana
+<img src="Treasurer.png" class="zoom"></img>
+<br>
+Auditor: John Cassiel Cunanan
+<img src="Auditor.png" class="zoom"></img>
+<br>
+P.R.O: Alteo Loel Fallesgon
+<img src="PRO.jpg" class="zoom"></img>
+<br>
+Escort: Cedrick Malto
+<img src="Escort.png" class="zoom"></img>
+<br>
+Muse: Mayumi Barquio
+<img src="Muse.jpg" class="zoom"></img>
+</h3>
+<br>
+<br>
+<h1>G11 Representatives:</h1>
+<h3>
+Gabriel Garcia (Bill Gates)
+<img src="Bg.png" class="zoom"></img>
+<br>
+Asia Botana (Unity)
+<img src="U.png" class="zoom"></img>
+<br>
+Alsudaisi Olama (Lady Augusta)
+<img src="La.jpg" class="zoom"></img>
+</h3>
+<br>
+<br>
+<h1>G12 Representatives:</h1>
+<h3>
+Adrian Eugenio (Binary)
+<img src="B.png" class="zoom"></img>
+<br>
+Vincent Singson (Walt Disney)
+<img src="Wd.png" class="zoom"></img>
+<br>
+</h3>
+              </div>
+              </div>
+              </body
+              </html>

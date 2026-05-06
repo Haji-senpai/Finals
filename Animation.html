@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page title</title>
+    <style>
+* {
+            padding: 0px;
+            margin: 0px;
+            font-family: arial  ;
+            box-sizing: border-box;
+        }
+        ul {
+            list-style: none;
+            background-color: darkgreen;
+        }
+        ul li {
+            display: inline-block;
+            position: relative;
+        }
+        ul li a {
+            display: block;
+            padding: 20px 25px;
+            color: #fff;
+            text-decoration: none;
+            text-align: center
+            font-size: 20px;
+        }
+        ul li ul.dropdown li {
+            display:block;
+        }
+        ul li ul.dropdown {
+            width: 100%;
+            background: #50C878;
+            position: absolute;
+            z-index: 999;
+            display: none;
+        }
+        a:hover {
+            color:black;
+        }
+        ul li a:hover {
+            background: white;
+            color: rgb(32,32,32);
+            border-radius: 5px;
+            box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px white, 0 0 100px white
+        }
+        a {
+          transition: 0.5s;
+        }
+        ul li:hover ul.dropdown {
+            display: block;
+        }        
+        .demo-wrap {
+            overflow: hidden;
+            position: relative;
+        }
+        .demo-bg {
+             opacity: 0.3;
+             position: absolute;
+             left: 0;
+             top: 0;
+             width: 100%;
+             height: 4000px;
+             object-fit: cover;
+        }
+        .demo-content {
+             position: relative;
+        }
+        .backgroundimg {
+            width: 275px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 75px;
+            box-shadow: 0px 8px 20px black;
+            border-radius: 50%;
+        }
+        .imagenav {
+            width: 55px;
+            position: absolute;
+        }
+        .column {
+            float: left;
+            width: 275px;
+            padding: 5px;
+            margin-left: 80px
+        }
+            /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        }
+        .left {
+            display: block;
+            margin-top: 0.4%;
+            margin-right: auto;
+            margin-left: 1%;
+            width: 50px;
+            float: left;
+        }
+        .perst{
+            width: 500px;
+            height: 400px;
+        }
+        .table1{
+            border-style: hidden;
+            background-color: #50C878;
+        }
+        .style1{
+            font-family: arial;
+            font-size: 20px;
+            text-align: justify;
+        }
+        .sikund{
+            width: 500px;
+            height: 400px;
+        }
+        .table2{
+            border-style: hidden;
+            background-color: #50C878;
+        }
+        .style2{
+            font-family: arial;
+            font-size: 20px;
+            text-align: justify;
+        }
+        .tird{
+            width: 500px;
+            height: 400px;
+        }
+        .table3{
+            border-style: hidden;
+            background-color: #50C878;
+        }
+        .style3{
+            font-family: arial;
+            font-size: 20px;
+            text-align: justify;
+        }
+        .title{
+            text-align: center;
+            font-size: 50px;
+        }
+        footer {
+            background-color: #222222;
+            text-align: center;
+            padding: 10px;
+            color: white
+        }
+    </style>
+</head>
+<body>
+        <img src="ggmon.png" class="imagenav"></img>
+  <ul>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="Search..." style="height: 25px;"><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li>
+            <a href="Home.html">Home</a>
+        </li>
+        <li>
+            <a href="#" style="background: white;
+            color: rgb(32,32,32);
+            border-radius: 5px;
+            box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px white, 0 0 100px white">Specialization &#9662;</a>
+            <ul class="dropdown">
+                <li><a href="Programming.html">Programming</a></li>
+                <li><a href="Animation.html" style="background: white;
+            color: rgb(32,32,32);
+            border-radius: 5px;
+            box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px white, 0 0 100px white">Animation</a></li>
+            </ul>
+        </li>
+        <li><a href="Courses.html">Courses</a></li>
+        <li><a href="Careers.html">Careers</a></li>
+        <li>
+            <a href="#">Organization &#9662;</a>
+            <ul class="dropdown">
+                <li><a href="Information.html">Information</a></li>
+                <li><a href="Events.html">Events</a></li>
+            </ul>
+        </li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li><a href="Login.html" class="signin">Sign in</a></li>
+    </ul></button>
+    <div class="demo-wrap">
+  <img src="school.jpg" class="demo-bg">
+          <div class="demo-content">
+    <br>
+    <h1 class="title">ANIMATION</h1>
+    <br>
+    <table cellspacing="10" class="table1">
+        <tr>    
+            <td>
+                <img src="anim pic.jpg" class="perst">
+            </td>
+            <td>
+                <p class="style1">
+                    Animation (ANI) Strand provides students with opportunities 
+                    to express their visual creativity through drawing and 
+                    storytelling with the aid of computer technology. ANI focuses 
+                    on Figure and Freehand drawing, traditional animation principles, 
+                    digital illustration techniques as well as 2D and 3D methodology.
+                </p>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <table cellspacing="10" class="table2">
+        <tr>
+            <td>
+                <p class="style2">
+                    Why should you pick the animation strand? Creativity and 
+                    imagination combine in the field of animation. If you've 
+                    always enjoyed creative pursuits such as drawing, illustration, 
+                    film, and design then you may want to study animation. 
+                    A degree in this subject gives you the technical and creative 
+                    skills to enjoy a thriving career in the arts and digital sphere.
+                </p>
+            </td>
+            <td>
+                <img src="anim pic 2.jpg" class="sikund">
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <table cellspacing="10" class="table3">
+        <tr>
+            <td>
+                <img src="anim pic 3.jpg" class="tird">
+            </td>
+            <td>
+                <p class="style3">
+                    What is the benefit of animation course? It opens up the door 
+                    to boundless creative possibilities. The course covers a wide 
+                    range of options and methods for producing animation sequences, 
+                    such as 2D hand-drawing, 2D and 3D computer-generated, stop-motion, 
+                    and model-based animation approaches.
+                </p>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+<footer>
+    <p>
+        Contact: <a href="mailto:alsudaisiolama@gmail.com">alsudaisiolama@gmail.com</a><br>
+        ©2024 PanghuloNationalHighSchool.com
+    </p>
+</footer>
+</body>
+</html>
